@@ -14,7 +14,8 @@
 
 https://github.com/yakushinang/WizardServer 
 
-API: /ticketWizard/:type 
+API: ```/ticketWizard/:type``` 
+
 types: business | lowCost
 
 ## Use Example
@@ -38,4 +39,16 @@ const machine = useFiniteStateMachines<T>({
 });
  
  ```
- The getTransitions function gets a ```setState``` method for updating the current state value and returns transitions object.
+ #### FSM hook params
+ 
+ state: string value of initial machine state.
+ 
+ transitions: function that gets a ```setState``` function for updating the current state value and returns transitions object.
+ 
+ #### FSM hook returns
+ 
+ currentState: value of active state.
+ 
+ dispatch: function that gets an action name from the transitions object.
+ 
+ 
