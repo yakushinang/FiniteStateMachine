@@ -1,4 +1,4 @@
-export type StateOptions = 'First' | 'Second' | 'Third'
+export type StateOptions = 'PersonalInfo' | 'TicketDirection' | 'FirstClassOnly'
 
 export type TicketConfig = {
     forms: StateOptions[]
@@ -6,5 +6,5 @@ export type TicketConfig = {
 
 export enum TicketTypes {
     Business = 'business',
-    LowCost = 'lowCost'
+    First = 'first'
 }

@@ -1,7 +1,4 @@
 import { SetState, Setup } from "./types";
-import _ from "lodash";
-
-
 
 export const getTransitions = <T extends string>(setup: Setup<T>[]) => (setState: SetState ) => {
 

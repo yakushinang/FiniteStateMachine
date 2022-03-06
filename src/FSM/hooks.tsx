@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useEffect, useState, useMemo} from 'react'
 import { MachineArg, FiniteStateMachinesProps } from './types';
 
 const useFiniteStateMachines = <T extends string>({state, transitions: transitionsFromProps}: FiniteStateMachinesProps<T>) => {
@@ -21,7 +21,17 @@ const useFiniteStateMachines = <T extends string>({state, transitions: transitio
     }
   }
 
-  return { dispatch,  currentState}
+  const getAvailableMethods = () => {
+    const availableMethods = transitions[currentState] 
+    return availableMethods ? Object.keys(availableMethods) : []
+  }
+
+  useEffect(() => {
+    setState(state)
+  }, [JSON.stringify(transitions)])
+
+
+  return { dispatch,  currentState, getAvailableMethods}
 }
 
 export default useFiniteStateMachines;

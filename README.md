@@ -16,7 +16,7 @@ https://github.com/yakushinang/WizardServer
 
 API: ```/ticketWizard/:type``` 
 
-types: business | lowCost
+types: business | first
 
 ## Use Example
 ```

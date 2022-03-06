@@ -4,10 +4,12 @@ import styled from 'styled-components'
 export const StyledWizardStepsCircle= styled.div `
     width: 20px;
     height: 20px;
-    background-color: rgb(59, 153, 153);
-    margin: 5px;
+    border: 1px solid #1976d2;
+    margin: 10px;
     padding: 5px;
     border-radius: 50%;
+    transition: background 0.375s ease-in-out;
+    background: ${({isActive}:{isActive: boolean}) => isActive? '#1976d2': '#fff'}
 `
 
 export const StyledWizardStepsContainer= styled.div `
@@ -15,10 +17,6 @@ export const StyledWizardStepsContainer= styled.div `
     justify-content: center;
 `
 
-export const StyledWizardStepsWizardStep= styled.div `
-
-`
-
-export const StyledWizardStepsWizardStepNumber= styled.div `
-    font-size: 20px;
+export const StyledWizardSteps= styled.div `
+    margin-top: 10px;
 `

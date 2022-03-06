@@ -16,6 +16,7 @@ export type Setup<T extends string> = {
 
 export type StepsProps<T extends string> = {
     setup: Setup<T>[];
+    activeStep: string;
 }
 
 export type SetState = React.Dispatch<React.SetStateAction<string>>;
